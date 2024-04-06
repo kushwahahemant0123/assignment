@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body style="background-color: gray;">
+    <div style="background-color: aqua; margin-left: 40%; margin-right: 40%; padding: 50px; ">
+    <h2>Details of student</h2>
+    <p>Name: <%=student.name %></p>
+    <p>Enrollment Number: <%=student.enroll %></p>
+    <p>Email: <%=student.email %></p>
+    <p>Gender: <%=student.gender %></p>
+    <p>Batch: <%=student.addyear %>-<%=student.passyear %></p>
+    <p>Year: <%=student.cyear %></p>
+    <p>Date of Birth: <%=student.dob.toString().split(" ").slice(1, 4).join("-") %></p>
+    <form action="/students/<%=student.enroll%>/edit" method="get">
+        <button>Edit</button>
+    </form>
+    <form action="/students/<%=student.enroll%>?_method=DELETE" method="post">
+        <button>Delete</button>
+    </form>
+</div>
+</body>
+</html>

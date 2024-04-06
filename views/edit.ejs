@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+</head>
+<body>
+    <h2>Edit the informations</h2>
+    <form action="/students/<%=student.enroll%>/edit?_method=patch" method="post" >
+        <div class="mb-3">
+        <label for="name">Enter Your Name</label>
+        <input type="text" name="name" id="name" value="<%=student.name%>">
+    </div>
+        <div class="mb-3">
+        <label for="name">Enter Your Enrollment Number</label>
+        <input type="text" name="enroll" id="enroll" value="<%=student.enroll%>">
+    </div>
+        <div class="mb-3">
+        <label for="name">Enter Your Email Address</label>
+        <input type="email" name="email" id="email"  value="<%=student.email%>">
+    </div>
+        <div class="mb-3">
+        <label for="dob">Date Of Birth</label>
+        <input type="date"name="dob" id="dob"  value="<%=student.dob%>">
+    </div>
+    
+    <button>Update</button>
+    
+</body>
+</html>
